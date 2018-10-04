@@ -21,13 +21,13 @@ public class main {
 	Kunde Kunde4 = new Kunde("testst³");
 	Kunde Kunde5 = new Kunde("johnny");
 
-	/*Kunde1.setName("nake");
+	Kunde1.setName("nake");
 	Kunde2.setName("make");
 	Kunde3.setName("lake");
 	Kunde4.setName("cake");
 	Kunde5.setName("kake");
 	
-	*/
+	
 	
 	Snake.enqueue(Kunde1);
 	Snake.enqueue(Kunde2);
