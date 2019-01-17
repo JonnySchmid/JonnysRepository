@@ -1,5 +1,5 @@
 import java.awt.EventQueue;
-
+import javax.swing.*;
 import javax.swing.JFrame;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -8,10 +8,30 @@ import java.awt.CardLayout;
 import javax.swing.BoxLayout;
 import java.awt.FlowLayout;
 import javax.swing.JButton;
+import javax.swing.AbstractAction;
+import java.awt.event.ActionEvent;
+import javax.swing.Action;
+import java.awt.event.ActionListener;
 
 public class test12 {
+	
+	int eins;
+	int zwei;
+	int drei;
+	
+	
+	int[] obenlinks   = {eins, zwei, drei};
+	int[] obenmitte   = {eins, zwei, drei};
+	int[] obenrechts  = {eins, zwei, drei};
+	int[] mittelinks  = {eins, zwei, drei};
+	int[] mittemitte  = {eins, zwei, drei};
+	int[] mitterechts = {eins, zwei, drei};
+	int[] untenlinks  = {eins, zwei, drei};
+	int[] untenmitte  = {eins, zwei, drei};
+	int[] untenrechts = {eins, zwei, drei};
 
 	private JFrame frame;
+	private final Action action = new SwingAction();
 
 	/**
 	 * Launch the application.
@@ -33,6 +53,11 @@ public class test12 {
 	 * Create the application.
 	 */
 	public test12() {
+		
+		 ImageIcon eins = new ImageIcon("weiss.png");
+		 ImageIcon zwei = new ImageIcon("kreuz.jpg");
+		 ImageIcon drei = new ImageIcon("kreis.png");	
+		
 		initialize();
 	}
 
@@ -46,6 +71,15 @@ public class test12 {
 		frame.getContentPane().setLayout(new GridLayout(3, 3, 0, 0));
 		
 		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(Spieler=Spieler1) {
+					Arrays.setObenlinks()=Arrays.getZwei();
+					
+					
+				}
+			}
+		});
 		frame.getContentPane().add(btnNewButton_1);
 		
 		JButton btnNewButton_3 = new JButton("New button");
@@ -73,4 +107,12 @@ public class test12 {
 		frame.getContentPane().add(btnNewButton_8);
 	}
 
+	private class SwingAction extends AbstractAction {
+		public SwingAction() {
+			putValue(NAME, "SwingAction");
+			putValue(SHORT_DESCRIPTION, "Some short description");
+		}
+		public void actionPerformed(ActionEvent e) {
+		}
+	}
 }
